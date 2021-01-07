@@ -1,0 +1,7 @@
+disasm level06
+
+execve level06.php
+
+found out what regexp does
+
+created a file [x ${`getflag`}]

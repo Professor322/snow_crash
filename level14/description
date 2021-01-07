@@ -1,0 +1,20 @@
+nothing found 
+so i tried to reverse getflag
+
+obdjump -d /bin/getflag to see disasm
+
+found 2 intersting places
+first: the one that checks if we are using gdb or ltrace comparison
+ 0x804898e test $eax $eax // val = -1
+ZF was not set
+i changed it to 0 (set $eax=0)
+
+than i surpassed the message "do no try to reverse it"
+
+than i set breakpoint right after first getuid:
+i found uid in /etc/passwd for flag14 it was 3014
+
+x8048b0a // first cmp 
+and eax value here was 2014
+i changed it to 3014 (set $eax=3014)
+and i got the password: 7QiHafiNa3HVozsaXkawuYrTstxbpABHD8CPnHJ

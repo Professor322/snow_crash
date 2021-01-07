@@ -1,0 +1,9 @@
+#localhost 4747 
+
+curl localhost:4747
+
+param(x)
+
+curl localhost:4747?x=param
+
+curl localhost:4747?x=\(getflag\)

@@ -1,0 +1,15 @@
+analyze program using ltrace and strings and objdumping
+
+find tricky place in diasm 
+   0x08048595 <main+9>:	call   0x8048380 <getuid@plt>
+   0x0804859a <main+14>:	cmp    $0x1092,%eax
+   0x0804859f <main+19>:	je     0x80485cb <main+63>
+   0x080485a1 <main+21>:	call   0x8048380 <getuid@plt>
+ 
+so we would jump if eax == 0x1092(4242)
+using gdb i set a breakpoint right after getuid and chaged eax 
+using set command to 4242
+
+and using command 'next' got the output of the password:
+2A31L79asukciNyi8uppkEuSx
+

