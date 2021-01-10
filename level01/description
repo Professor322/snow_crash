@@ -1,7 +1,0 @@
-cat /etc/passwd
-42hDRfypTqqnw
-
-create file with encryption above
-
-john --show passwd
-got password: abcdefg

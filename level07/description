@@ -1,5 +1,0 @@
-ltrace to see whats happening in binary 
-
-export LOGNAME=some_stuff to see how it works
-
-export LOGNAME="\$(getflag)" to make sure it is executed as flag07

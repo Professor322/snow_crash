@@ -1,8 +1,0 @@
-find / -user flag00 2> /dev/null
-/usr/sbin/john
-
-dcode.fr
-
-caesar code all shifts and one found was actually making sense
-nottoohardhere
-

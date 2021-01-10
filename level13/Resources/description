@@ -1,3 +1,7 @@
+run program: it wait for uid 4242
+level13@SnowCrash:~$ ./level13 
+UID 2013 started us but we we expect 4242
+
 analyze program using ltrace and strings and objdumping
 
 find tricky place in diasm 
@@ -7,6 +11,8 @@ find tricky place in diasm
    0x080485a1 <main+21>:	call   0x8048380 <getuid@plt>
  
 so we would jump if eax == 0x1092(4242)
+set $eax=0x1092
+
 using gdb i set a breakpoint right after getuid and chaged eax 
 using set command to 4242
 

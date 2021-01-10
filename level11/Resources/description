@@ -2,6 +2,9 @@ lua scripts wait for input password then
 hash the password and compares hashes
 it executes from flag11
 
+local server = assert(socket.bind("127.0.0.1", 5151))
+
+
 it uses io.open("some text"..pass.."some text")
 where pass is a function argument which we are passing as a password
 
@@ -10,7 +13,7 @@ to the file
 
 like this:
 
-password: "\getflag > /tmp/password"\
+password: \";getflag > /tmp/password;\"
 
 here we have our password to level12 without loggin into flag11: fa6v5ateaw21peobuub8ipe6s
 

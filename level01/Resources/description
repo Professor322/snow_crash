@@ -1,0 +1,24 @@
+level01@SnowCrash:~$ ls -la
+total 12
+dr-x------ 1 level01 level01  100 Mar  5  2016 .
+d--x--x--x 1 root    users    340 Aug 30  2015 ..
+-r-x------ 1 level01 level01  220 Apr  3  2012 .bash_logout
+-r-x------ 1 level01 level01 3518 Aug 30  2015 .bashrc
+-r-x------ 1 level01 level01  675 Apr  3  2012 .profile
+
+no files
+
+level01@SnowCrash:~$ find / -user flag01 2> /dev/null
+
+at all
+
+cat /etc/passwd
+flag01:42hDRfypTqqnw:3001:3001::/home/flag/flag01:/bin/bash
+
+is a field with encrypted password 42hDRfypTqqnw
+
+create file with encryption above
+use jong to crack it 
+
+john --show passwd
+got password: abcdefg

